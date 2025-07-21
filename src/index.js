@@ -40,7 +40,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const lightbox = GLightbox();
+  GLightbox();
   bootstrapModalHash(bootstrapModal);
 
   new Swiper('.swiper__main',{
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Modal color Thumb
-    var modalCatalogThumb = new Swiper(container.querySelector('.swiper__color-thumbs'), {
+    var modalColorThumb = new Swiper(container.querySelector('.swiper__color-thumbs'), {
       spaceBetween: 10,
       slidesPerView: 5,
       freeMode: true,
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         prevEl: ".swiper-button-prev",
       },
       thumbs: {
-        swiper: modalCatalogThumb,
+        swiper: modalColorThumb,
       },
     });
   })
