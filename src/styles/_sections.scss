@@ -1,0 +1,40 @@
+/*
+ * Mixin example with breakpoint
+ */
+// @include media-breakpoint-up(lg) {
+// 	Breakpoint styles
+// }
+
+// .swiper__main {
+//     img {
+//         transform: scale(1.5);
+//         transition: transform 5s ease-in-out;
+//     }
+//     .swiper-slide-next {
+//         img {
+//             transform: scale(1);
+//         }
+//     }
+//     .swiper-slide-active {
+//         img {
+//             // transform: scale(1);
+//             animation: imgAnim 5s ease-in-out;
+//         }
+//     }
+// }
+
+// @keyframes imgAnim {
+//     from {
+//         transform: scale(1);
+//     }
+  
+//     to {
+//         transform: scale(1.5);
+//     }
+// }
+
+.swiper-thumbs {
+  .swiper-slide {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,26 @@
+/*
+ * Bootstrap variable reassignment
+ */
+
+/* Import the bootstrap modules needed to change the variables */
+//@import 'bootstrap/scss/functions';
+//@import 'bootstrap/scss/mixins';
+
+/* Colors */
+
+$primary: #1e8cca;
+$secondary: #6c757d;
+// $success: #198754;
+// $info: #0dcaf0;
+// $warning: #ffc107;
+// $danger: #dc3545;
+// $light: #f8f9fa;
+// $dark: #212529;
+
+/*
+ * User variables
+ */
+$scroll-offset: 59px;
+
+/* Font-family */
+$font-family-sans-serif: 'Commissioner', sans-serif;

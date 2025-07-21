@@ -1,0 +1,23 @@
+[id] {
+    scroll-margin-top: $scroll-offset;
+}
+
+/* Extend the bootstrap container if needed */
+/*@media (min-width: 1600px) {
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1500px;
+    }
+}*/
+
+.app-title {
+    @include responsive-size(font-size, 32, 72, lg);
+}
+
+.app-header {
+    @include responsive-size(font-size, 24, 48, lg);
+}
