@@ -26,6 +26,9 @@ module.exports = (env, args) => {
                     [
                         `${path.join(__dirname, 'src')}/**/*`,
                         `${path.join(__dirname)}/index.html`,
+                        `${path.join(__dirname)}/InStock.html`,
+                        `${path.join(__dirname)}/Clients.html`,
+                        `${path.join(__dirname)}/Contacts.html`,
                         `${path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')}/bootstrap.min.js`,
                         `${path.join(__dirname, 'node_modules', 'lite-youtube-embed', 'src')}/lite-yt-embed.js`,
                         `${path.join(__dirname, 'node_modules', 'glightbox', 'dist', 'js')}/glightbox.min.js`,

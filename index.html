@@ -24,23 +24,49 @@
 
 <body>
     <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg py-1 bg-white rounded-bottom shadow">
+        <nav class="navbar navbar-expand-lg py-1 bg-secondary rounded-bottom shadow">
             <div class="container">
                 <div class="d-none d-sm-inline me-3 flex-grow-1">
-                    <a href="#">
-                        <img src="./assets/images/logo/logo.svg" alt="Logo">
+                    <a href="/index.html">
+                        <img src="./assets/images/logo/logo.png" alt="Logo">
                     </a>
+                </div>
+                <div class="collapse navbar-collapse order-1 order-lg-0" id="navbarNav">
+                    <ul class="navbar-nav fs-5 fw-bold py-3 py-lg-0 justify-content-center flex-md-row align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-white link-primary px-3 position-relative" href="/InStock.html">
+                                Авто в наличии
+                                <span class="position-absolute top-0 start-0 end-0 bottom-0 d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white link-primary px-3 position-relative" href="/Clients.html">
+                                Клиентам
+                                <span class="position-absolute top-0 start-0 end-0 bottom-0 d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white link-primary px-3 position-relative" href="#">
+                                О нас
+                                <span class="position-absolute top-0 start-0 end-0 bottom-0 d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white link-primary px-3 position-relative" href="/Contacts.html">
+                                Свяжитесь с нами
+                                <span class="position-absolute top-0 start-0 end-0 bottom-0 d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbarNav"></span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="d-flex flex-column fw-bold text-tnum">
-                    <a href="tel:+375290000000" class="text-dark link-primary link-underline-opacity-0 px-3">
-                        <img src="./assets/images/operator/logo_mts_64.jpg" alt width="16" height="16">
-                        <span>(29) 000-00-00</span>
-                    </a>
-                    <a href="tel:+375290000000" class="text-dark link-primary link-underline-opacity-0 px-3">
-                        <img src="./assets/images/operator/logo_A1_56.png" alt width="16" height="16">
-                        <span>(29) 000-00-00</span>
+                    <a href="tel:+375290000000" class="text-white link-primary link-underline-opacity-0 px-3">
+                        <span>+375 17 375 15 87</span>
                     </a>
                 </div>
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="burger">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
         </nav>
     </header>
@@ -48,13 +74,16 @@
     <main>
         <section id="main" class="position-relative py-5 min-vh-100 d-flex">
             <div class="position-absolute w-100 h-100 top-0 start-0">
-                <div class="swiper swiper__main w-100 h-100">
+                <!-- <div class="swiper swiper__main w-100 h-100">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
                         <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
                         <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
                     </div>
-                </div>
+                </div> -->
+                <video autoplay muted loop class="w-100 h-100 object-fit-cover">
+                    <source src="./assets/video/B_Main.mp4" type="video/mp4">
+                </video>
                 <div class="w-100 h-100 position-absolute top-0 start-0 bg-black bg-opacity-75 z-1"></div>
             </div>
             <div class="container position-relative z-1 text-white py-5 d-flex flex-column justify-content-center">
@@ -67,16 +96,59 @@
             </div>
         </section>
         <section id="catalog" class="py-5">
-            <div class="container">
-                <div class="app-header mb-4 fw-bold">Модельный ряд под заказ</div>
-                <div class="row">
+            <div class="app-header mb-4 fw-bold text-secondary bg-primary">
+                <div class="container d-flex position-relative z-1">
+                    <div class="bg-primary pe-2">
+                        <img src="./assets/images/logo/header_logo.png" alt="">
+                    </div>
+                    <div class="text-center flex-grow-1 pt-4">FAW Bestune Xiaoma</div>
+                </div>
+            </div>
+            <div class="container mb-4">
+                <div class="swiper swiper__models">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#modal-BestuneXiaoma1" data-bs-toggle="modal" class="d-block text-dark link-primary link-underline link-underline-opacity-0">
+                                <div class="fs-4 mb-3 text-center">Небесный индиго <br> ( sky indigo ) </div>
+                                <img src="./assets/images/car/D131_EXT-deep_blue/D131_EXT Front - deep blue.png" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#modal-BestuneXiaoma2" data-bs-toggle="modal" class="d-block text-dark link-primary link-underline link-underline-opacity-0">
+                                <div class="fs-4 mb-3 text-center">Пузырьковый голубой <br> ( bubble blue ) </div>
+                                <img src="./assets/images/car/D131_EXT-blue/D131_EXT Front - blue.png" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#modal-BestuneXiaoma3" data-bs-toggle="modal" class="d-block text-dark link-primary link-underline link-underline-opacity-0">
+                                <div class="fs-4 mb-3 text-center">Камелиевый зелёный <br> ( camellia green )</div>
+                                <img src="./assets/images/car/D131_EXT-green/D131_EXT Front - green.png" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#modal-BestuneXiaoma4" data-bs-toggle="modal" class="d-block text-dark link-primary link-underline link-underline-opacity-0">
+                                <div class="fs-4 mb-3 text-center">персиково-розовый <br> ( peach pink )</div>
+                                <img src="./assets/images/car/D131_EXT-pink/D131_EXT Front - pink.png" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#modal-BestuneXiaoma5" data-bs-toggle="modal" class="d-block text-dark link-primary link-underline link-underline-opacity-0">
+                                <div class="fs-4 mb-3 text-center">Жасминово-белый <br> ( jasmine white )</div>
+                                <img src="./assets/images/car/D131_EXT-white/D131_EXT Front - white.png" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- <div class="row">
                     <div class="col-12 col-md-4">
                         <a href="#modal-catalog1" data-bs-toggle="modal" class="text-dark link-primary link-underline link-underline-opacity-0">
                             <div class="fs-4 mb-3">Bestune Xiaoma</div>
                             <img src="./assets/images/car/BestunePony.png" alt="" class="w-100">
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
@@ -86,20 +158,25 @@
             <div class="row align-items-center row-gap-3">
                 <div class="col-12 col-md-4 col-lg-3">
                     <a href="#" class="d-block">
-                        <img src="./assets/images/logo/logo.svg" alt="Logo" class="w-100">
+                        <img src="./assets/images/logo/logo.png" alt="Logo" class="w-100">
                     </a>
                 </div>
                 <div class="col-12 col-md-8 col-lg-9 d-flex flex-column row-gap-2">
-                    <p class="m-0">«ООО «7 Джи Пи“. Свидетельство о государственной регистрации <br>№ 193641164 от 15.08.2022 г. Юридический адрес: 220025, г. Минск, пр-т Дзержинского, 132/1 </p>
+                    <p class="m-0">ООО “Лада ОМС Техно”. Свидетельство о государственной регистрации № ХХХХХХХХ от ХХ.ХХ.202Х г.</p>
+                    <p class="m-0">Юридический адрес: 220069 г. Минск, Республика Беларусь, ул. Щорса, 1А-3 </p>
+                    <p class="m-0">УНП: 193771073       ОКПО: 508716225000</p>
+                    <p class="m-0">Данный интернет-сайт не является интернет-магазином. Вся информация, размещенная на данном сайте, носит исключительно ознакомительный характер и не является публичной офертой.</p>
+                    <p class="m-0">Копирование визуального и текстового контента с сайта ХХХХ.by запрещено.</p>
+                    <!-- <p class="m-0">«ООО «7 Джи Пи“. Свидетельство о государственной регистрации <br>№ 193641164 от 15.08.2022 г. Юридический адрес: 220025, г. Минск, пр-т Дзержинского, 132/1 </p>
                     <p class="m-0">Данный интернет-сайт не является интернет-магазином. Вся информация, размещенная на данном сайте, носит исключительно ознакомительный характер и не является публичной офертой.”</p>
-                    <p class="m-0">Копирование визуального и текстового контента с сайта sgp.by запрещено</p>
+                    <p class="m-0">Копирование визуального и текстового контента с сайта sgp.by запрещено</p> -->
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Modals -->
-    <div class="modal fade" id="modal-catalog1">
+    <div class="modal fade" id="modal-BestuneXiaoma1">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-body modal-catalog">
@@ -108,22 +185,28 @@
                     <div class="mb-4">
                         <div class="swiper swiper__catalog mb-3">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/front.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/back.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
                             </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
                         <div class="swiper swiper__catalog-thumbs">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/front.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/back.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-deep_blue/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
                             </div>
                         </div>
                     </div>
@@ -147,26 +230,240 @@
                             <p class="m-0">Время зарядки от 30% до 80%:&nbsp; &nbsp; 30 мин</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-BestuneXiaoma2">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body modal-catalog">
+                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="fs-2 fw-bold text-center mb-4">Bestune Xiaoma</div>
                     <div class="mb-4">
-                        <div class="swiper swiper__color mb-3">
+                        <div class="swiper swiper__catalog mb-3">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/front.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/back.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper swiper__catalog-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/front.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/back.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-blue/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
                             </div>
                         </div>
-                        <div class="swiper swiper__color-thumbs">
+                    </div>
+                    <div class="fs-2 mb-4">BYD Qin Plus EV</div>
+                    <div class="row mb-4 row-gap-3">
+                        <div class="col-12 col-lg-6">
+                            <p>BYD Qin Plus EV это электрический седан, производимый китайским автомобильным производителем BYD Auto. Он был представлен в 2013 году как гибридный автомобиль, а затем в 2015 году была выпущена полностью электрическая версия.</p>
+                            <p>Внешне выполнен в стиле классического седана, но с элементами, характерными для электромобилей.</p>
+                            <p>BYD Qin Plus EV имеет современный дизайн в сочетании с эргономичным кузовом и высоким уровнем оснащения. BYD Qin Plus EV является одним из самых продаваемых электромобилей в Китае.</p>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex flex-column row-gap-2">
+                            <p class="m-0">Габариты:&nbsp; 4765 x 1837 x 1515 мм</p>
+                            <p class="m-0">Расстояние между осями:&nbsp; 2718 мм</p>
+                            <p class="m-0">Ширина передней и задней колеи: 1580 мм</p>
+                            <p class="m-0">Типоразмер шин: 215/55 R17</p>
+                            <p class="m-0">Максимальная мощность двигателя: 100 кВт</p>
+                            <p class="m-0">Мах крутящийся момент: 180 Н/М</p>
+                            <p class="m-0">Время разгона 0～50km/h — 5,5 сек</p>
+                            <p class="m-0">Запас хода на 1-м заряде: 510 км</p>
+                            <p class="m-0">Емкость батареи: 57.6 кВтч</p>
+                            <p class="m-0">Время зарядки от 30% до 80%:&nbsp; &nbsp; 30 мин</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-BestuneXiaoma3">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body modal-catalog">
+                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="fs-2 fw-bold text-center mb-4">Bestune Xiaoma</div>
+                    <div class="mb-4">
+                        <div class="swiper swiper__catalog mb-3">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar2.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
-                                <div class="swiper-slide"><img src="./assets/images/main/mainCar1.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/front.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/back.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
                             </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper swiper__catalog-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/front.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/back.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-green/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fs-2 mb-4">BYD Qin Plus EV</div>
+                    <div class="row mb-4 row-gap-3">
+                        <div class="col-12 col-lg-6">
+                            <p>BYD Qin Plus EV это электрический седан, производимый китайским автомобильным производителем BYD Auto. Он был представлен в 2013 году как гибридный автомобиль, а затем в 2015 году была выпущена полностью электрическая версия.</p>
+                            <p>Внешне выполнен в стиле классического седана, но с элементами, характерными для электромобилей.</p>
+                            <p>BYD Qin Plus EV имеет современный дизайн в сочетании с эргономичным кузовом и высоким уровнем оснащения. BYD Qin Plus EV является одним из самых продаваемых электромобилей в Китае.</p>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex flex-column row-gap-2">
+                            <p class="m-0">Габариты:&nbsp; 4765 x 1837 x 1515 мм</p>
+                            <p class="m-0">Расстояние между осями:&nbsp; 2718 мм</p>
+                            <p class="m-0">Ширина передней и задней колеи: 1580 мм</p>
+                            <p class="m-0">Типоразмер шин: 215/55 R17</p>
+                            <p class="m-0">Максимальная мощность двигателя: 100 кВт</p>
+                            <p class="m-0">Мах крутящийся момент: 180 Н/М</p>
+                            <p class="m-0">Время разгона 0～50km/h — 5,5 сек</p>
+                            <p class="m-0">Запас хода на 1-м заряде: 510 км</p>
+                            <p class="m-0">Емкость батареи: 57.6 кВтч</p>
+                            <p class="m-0">Время зарядки от 30% до 80%:&nbsp; &nbsp; 30 мин</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-BestuneXiaoma4">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body modal-catalog">
+                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="fs-2 fw-bold text-center mb-4">Bestune Xiaoma</div>
+                    <div class="mb-4">
+                        <div class="swiper swiper__catalog mb-3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/front.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/back.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper swiper__catalog-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/front.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/back.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-pink/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fs-2 mb-4">BYD Qin Plus EV</div>
+                    <div class="row mb-4 row-gap-3">
+                        <div class="col-12 col-lg-6">
+                            <p>BYD Qin Plus EV это электрический седан, производимый китайским автомобильным производителем BYD Auto. Он был представлен в 2013 году как гибридный автомобиль, а затем в 2015 году была выпущена полностью электрическая версия.</p>
+                            <p>Внешне выполнен в стиле классического седана, но с элементами, характерными для электромобилей.</p>
+                            <p>BYD Qin Plus EV имеет современный дизайн в сочетании с эргономичным кузовом и высоким уровнем оснащения. BYD Qin Plus EV является одним из самых продаваемых электромобилей в Китае.</p>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex flex-column row-gap-2">
+                            <p class="m-0">Габариты:&nbsp; 4765 x 1837 x 1515 мм</p>
+                            <p class="m-0">Расстояние между осями:&nbsp; 2718 мм</p>
+                            <p class="m-0">Ширина передней и задней колеи: 1580 мм</p>
+                            <p class="m-0">Типоразмер шин: 215/55 R17</p>
+                            <p class="m-0">Максимальная мощность двигателя: 100 кВт</p>
+                            <p class="m-0">Мах крутящийся момент: 180 Н/М</p>
+                            <p class="m-0">Время разгона 0～50km/h — 5,5 сек</p>
+                            <p class="m-0">Запас хода на 1-м заряде: 510 км</p>
+                            <p class="m-0">Емкость батареи: 57.6 кВтч</p>
+                            <p class="m-0">Время зарядки от 30% до 80%:&nbsp; &nbsp; 30 мин</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-BestuneXiaoma5">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body modal-catalog">
+                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="fs-2 fw-bold text-center mb-4">Bestune Xiaoma</div>
+                    <div class="mb-4">
+                        <div class="swiper swiper__catalog mb-3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/front.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/back.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover glightbox" data-gallery="catalog1"></div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper swiper__catalog-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/front.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/back.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/headlight.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/wheel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/inner_full.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/inner_chair.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/inner_panel.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                                <div class="swiper-slide"><img src="./assets/images/car/D131_EXT-white/inner_main.jpg" alt="" class="w-100 h-100 object-fit-cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fs-2 mb-4">BYD Qin Plus EV</div>
+                    <div class="row mb-4 row-gap-3">
+                        <div class="col-12 col-lg-6">
+                            <p>BYD Qin Plus EV это электрический седан, производимый китайским автомобильным производителем BYD Auto. Он был представлен в 2013 году как гибридный автомобиль, а затем в 2015 году была выпущена полностью электрическая версия.</p>
+                            <p>Внешне выполнен в стиле классического седана, но с элементами, характерными для электромобилей.</p>
+                            <p>BYD Qin Plus EV имеет современный дизайн в сочетании с эргономичным кузовом и высоким уровнем оснащения. BYD Qin Plus EV является одним из самых продаваемых электромобилей в Китае.</p>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex flex-column row-gap-2">
+                            <p class="m-0">Габариты:&nbsp; 4765 x 1837 x 1515 мм</p>
+                            <p class="m-0">Расстояние между осями:&nbsp; 2718 мм</p>
+                            <p class="m-0">Ширина передней и задней колеи: 1580 мм</p>
+                            <p class="m-0">Типоразмер шин: 215/55 R17</p>
+                            <p class="m-0">Максимальная мощность двигателя: 100 кВт</p>
+                            <p class="m-0">Мах крутящийся момент: 180 Н/М</p>
+                            <p class="m-0">Время разгона 0～50km/h — 5,5 сек</p>
+                            <p class="m-0">Запас хода на 1-м заряде: 510 км</p>
+                            <p class="m-0">Емкость батареи: 57.6 кВтч</p>
+                            <p class="m-0">Время зарядки от 30% до 80%:&nbsp; &nbsp; 30 мин</p>
                         </div>
                     </div>
                 </div>

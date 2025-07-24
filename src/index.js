@@ -27,6 +27,9 @@ import bootstrapModal from 'bootstrap/js/dist/modal';
  */
 
 import '../index.html'; // Hack for recompile webpack when html changes (requires null-loader)
+import '../InStock.html'; // Hack for recompile webpack when html changes (requires null-loader)
+import '../Clients.html'; // Hack for recompile webpack when html changes (requires null-loader)
+import '../Contacts.html'; // Hack for recompile webpack when html changes (requires null-loader)
 import './styles/style.scss';
 
 import 'glightbox/dist/css/glightbox.min.css';
@@ -35,9 +38,10 @@ import GLightbox from 'glightbox';
 import bootstrapModalHash from './components/bootstrapModalHash';
 
 import Swiper from 'swiper';
-import { EffectFade, Autoplay, Thumbs } from 'swiper/modules';
+import { EffectFade, Autoplay, Thumbs, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
 
 document.addEventListener('DOMContentLoaded', () => {
   GLightbox();
@@ -56,6 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
 
+  document.querySelectorAll('.swiper__models').forEach((model) => {
+    new Swiper (model, {
+      modules: [Navigation],
+      spaceBetween: 10,
+      slidesPerView: 4,
+      navigation: {
+        nextEl: model.querySelector(".swiper-button-next"),
+        prevEl: model.querySelector(".swiper-button-prev"),
+      },
+    })
+  })
+
   document.querySelectorAll('.modal-catalog').forEach((container) => {
     // Modal first Thumb
     var modalCatalogThumb = new Swiper(container.querySelector('.swiper__catalog-thumbs'), {
@@ -64,34 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
       freeMode: true,
       watchSlidesProgress: true,
     });
-    new Swiper(container.querySelector('.swiper__catalog'), {
-      modules: [Thumbs],
+    const swiperCatalog = container.querySelector('.swiper__catalog')
+    new Swiper(swiperCatalog, {
+      modules: [Thumbs, Navigation],
       spaceBetween: 10,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: swiperCatalog.querySelector(".swiper-button-next"),
+        prevEl: swiperCatalog.querySelector(".swiper-button-prev"),
       },
       thumbs: {
         swiper: modalCatalogThumb,
-      },
-    });
-
-    // Modal color Thumb
-    var modalColorThumb = new Swiper(container.querySelector('.swiper__color-thumbs'), {
-      spaceBetween: 10,
-      slidesPerView: 5,
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
-    new Swiper(container.querySelector('.swiper__color'), {
-      modules: [Thumbs],
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      thumbs: {
-        swiper: modalColorThumb,
       },
     });
   })
