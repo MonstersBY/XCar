@@ -48,3 +48,13 @@
 .contacts__map {
   top: 8rem;
 }
+.main__section {
+  min-height: 85vh;
+}
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+  opacity: 0 !important;
+}
+// .swiper-button-prev, .swiper-button-next {
+//   color: $primary !important;
+// }
