@@ -64,11 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
     new Swiper (model, {
       modules: [Navigation],
       spaceBetween: 10,
-      slidesPerView: 4,
+      slidesPerView: 2,
       navigation: {
         nextEl: model.querySelector(".swiper-button-next"),
         prevEl: model.querySelector(".swiper-button-prev"),
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
+        }
+      }
     })
   })
 
@@ -76,9 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Modal first Thumb
     var modalCatalogThumb = new Swiper(container.querySelector('.swiper__catalog-thumbs'), {
       spaceBetween: 10,
-      slidesPerView: 5,
+      slidesPerView: 3,
       freeMode: true,
       watchSlidesProgress: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 5,
+        }
+      }
     });
     const swiperCatalog = container.querySelector('.swiper__catalog')
     new Swiper(swiperCatalog, {
