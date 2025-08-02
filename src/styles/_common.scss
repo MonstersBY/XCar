@@ -20,15 +20,19 @@
 
 .app-header {
     @include responsive-size(font-size, 24, 48, lg);
-    border-bottom: 10px solid $primary_light;
-    position: relative;
+    // border-bottom: 10px solid $primary_light;
+    // position: relative;
 
-    &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        border-bottom: 10px solid $primary_light;
-        position: absolute;
-        top: 15px;
-    }
+    // &::before {
+    //     content: '';
+    //     display: block;
+    //     width: 100%;
+    //     border-bottom: 10px solid $primary_light;
+    //     position: absolute;
+    //     top: 15px;
+    // }
+}
+
+.header__logo {
+    max-width: 12rem;
 }
