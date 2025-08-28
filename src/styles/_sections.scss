@@ -58,3 +58,7 @@
 // .swiper-button-prev, .swiper-button-next {
 //   color: $primary !important;
 // }
+
+.nav-item.active .link-primary {
+  color: tint-color($primary, 25) !important;
+}
